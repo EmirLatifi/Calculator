@@ -1,0 +1,129 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color:rgb(76, 122, 142);
+
+}
+.container {
+    width: 470px;
+    min-height: 400px;
+    padding: 40px 35px;
+    border-radius: 10px;
+    background-color: rgb(38, 38, 38);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    padding: 20px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.7);
+    
+}
+.calculator button  {
+    color: #fff;
+    place-items: center;
+    font-size:19px;
+    margin: 5px;
+    height: 70px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.65),
+    10px 10px 15px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .calculator-input {
+    margin:5px;
+    grid-column: span 4;
+    height: 110px;
+    border: solid black 3px;
+    font-size: 35px;
+    padding:30px 15px 0px 0px ;
+    background-color:#f1f1f1;
+    border-radius: 5px;
+    text-align: right;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .calculator button.clear {
+    grid-column: span 2;
+    width: 165px;
+    background:red !important;
+}
+ 
+.calculator button.equal {
+    grid-column: span 2;
+    width: 165px;
+    background:rgb(9, 119, 178) !important;
+}
+@media (max-width: 760px) {
+  .container {
+    width: 100%;
+    padding: 30px 25px;
+  }
+
+  .calculator {
+    padding: 15px;
+  }
+
+  .calculator button {
+    width:60px ;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .calculator-input {
+    height: 90px;
+    font-size: 16px;
+  }
+
+  .calculator button.clear,
+  .calculator button.equal {
+    grid-column: span 2;
+    width: 140px;
+  
+  }
+}
+
+@media (max-width: 480px) {
+    .container {
+      width: 100%;
+      padding: 25p 20px;
+    }
+  
+    .calculator {
+      padding: 10px;
+    }
+  
+    .calculator button {
+      width:50px ;
+      height: 50px;
+      font-size: 16px;
+    }
+  
+    .calculator-input {
+      height: 70px;
+      font-size: 16px;
+    }
+  
+    .calculator button.clear,
+    .calculator button.equal {
+      grid-column: span 2;
+      width: 120px;
+    }
+  }
+  
